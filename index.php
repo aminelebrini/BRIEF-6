@@ -7,8 +7,6 @@
     {
         $page = 'home';
     }
-
-    $view = "views/$page.php";
     include __DIR__ . "/templates/layout.php";
 
 ?>
