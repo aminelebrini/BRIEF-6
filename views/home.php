@@ -1,3 +1,1 @@
-<?php
-    include 'templates/slide.php';
-?>
+<?php include __DIR__ . '/../templates/slide.php'; ?>
