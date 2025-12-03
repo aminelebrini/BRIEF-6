@@ -1,5 +1,5 @@
-<div class="contain p-10 flex flex-col items-center justify-center gap-10 md:flex-row md:gap-15">
-    <div class="left-contain flex flex-col items-center justify-center text-center md:items-start md:text-start">
+<div class="contain p-10 flex flex-col items-center justify-center md:w-full md:justify-evenly gap-10 md:flex-row md:gap-15">
+    <div class="left-contain md:w-full flex flex-col items-center justify-center text-center">
         <h1 class="text-[30px] font-bold">Contact Us</h1>
         <p class="text-[20px]">Have a project in mind or just want to say hello? Fill out the form, and our team at NovaCraft Studio will respond promptly.<br>
         We’re excited to hear from you and bring your ideas to life!</p>
@@ -11,22 +11,45 @@
                 <label for="fullname" class="text-[18px]">FULL NAME</label>
                 <input class="border-[3px] rounded-[10px] p-[15px]" name="name" type="text" id="fullname" placeholder="FULL NAME"/>
                 <?php 
-                    $name = "";
-                    if($_SERVER['REQUEST_METHOD'] == 'POST' && empty($_POST['name']))
+                    $namevef = "";
+                    $verifName = "";
+                    if($_SERVER['REQUEST_METHOD'] == 'POST')
                     {
-                        $name = '<div class="popup text-red-700 ">Veuillez entrer un nom valide.</div>';
+                        $verifName = $_POST['name'];
+                    
+                        if(empty($verifName))
+                        {
+                            $namevef = '<div class="popup text-red-700 ">Veuillez entrer Le nom</div>';
+                        }
+                        for($x = 0; $x < strlen($verifName); $x++)
+                        {
+                            if(!(($verifName[$x] >= 'a' && $verifName[$x] <= 'z') || ($verifName[$x] >= 'A' && $verifName[$x] <= 'Z') || $verifName[$x] === " "))
+                            {
+                                $namevef = '<div class="text-red-700">Veuillez entrer un nom Valide</div>';
+                            }
+                        }
                     }
                 ?>
-                <p><?php echo $name ?></p>
+                <p><?php echo $namevef; ?></p>
             </div>
             <div  class="flex flex-col">
                 <label for="email" class="text-[18px]">EMAIL</label>
                 <input class="border-[3px] rounded-[10px] p-[15px]" name="email" type="text" id="email" placeholder="FULL NAME"/>
                 <?php 
                     $email = "";
-                    if($_SERVER['REQUEST_METHOD'] == 'POST' && empty($_POST['email']))
+                    $verifEmail = "";
+                    if($_SERVER['REQUEST_METHOD'] == 'POST')
                     {
-                        $email = '<div class="popup text-red-700 ">Veuillez entrer un email valide.</div>';
+                        $verifEmail = $_POST['email'];
+
+                        if(empty($verifEmail))
+                        {
+                            $email = '<div class="popup text-red-700 ">Veuillez entrer un email</div>';
+                        }
+                        if(!(str_ends_with($verifEmail, ".com") || str_ends_with($verifEmail, ".ma")))
+                        {
+                            $email = '<div class="popup text-red-700 ">Veuillez entrer un email valide.</div>';
+                        }
                     }
                 ?>
                 <p><?php echo $email ?></p>
@@ -43,8 +66,8 @@
                 ?>
                 <p><?php echo $message ?></p>
             </div>
-            <div class="sub w-full flex flex-row items-center justify-center">
-                <button type="submit" class="border-2 w-[200px] h-[50px] rounded-[10px]">SEND</button>
+            <div class="sub w-full flex flex-row items-center justify-center md:justify-end">
+                <button type="submit" class="border-2 w-[200px] h-[50px] rounded-[10px] hover:bg-gray-900 hover:text-white hover:transition-all hover:duration-500 hover:ease-in-out">SEND</button>
             </div>
         </form>
     </div>
