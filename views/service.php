@@ -18,7 +18,7 @@
     ];
 ?>
 
-<div class="w-full flex flex-col items-center justify-center gap-10 py-10 h-[81vh]">
+<div class="w-full flex flex-col items-center justify-center gap-10 py-10 h-full md:h-[81vh]">
     <h1 class="text-4xl font-bold">Our Services</h1>
     <div class="w-full flex flex-col md:flex-row md:flex-wrap md:justify-center gap-5">
         <?php foreach($Services as $serv) { ?>
