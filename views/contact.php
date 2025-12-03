@@ -10,14 +10,38 @@
             <div  class="flex flex-col">
                 <label for="fullname" class="text-[18px]">FULL NAME</label>
                 <input class="border-[3px] rounded-[10px] p-[15px]" name="name" type="text" id="fullname" placeholder="FULL NAME"/>
+                <?php 
+                    $name = "";
+                    if($_SERVER['REQUEST_METHOD'] == 'POST' && empty($_POST['name']))
+                    {
+                        $name = '<div class="popup text-red-700 ">Veuillez entrer un nom valide.</div>';
+                    }
+                ?>
+                <p><?php echo $name ?></p>
             </div>
             <div  class="flex flex-col">
                 <label for="email" class="text-[18px]">EMAIL</label>
                 <input class="border-[3px] rounded-[10px] p-[15px]" name="email" type="text" id="email" placeholder="FULL NAME"/>
+                <?php 
+                    $email = "";
+                    if($_SERVER['REQUEST_METHOD'] == 'POST' && empty($_POST['email']))
+                    {
+                        $email = '<div class="popup text-red-700 ">Veuillez entrer un email valide.</div>';
+                    }
+                ?>
+                <p><?php echo $email ?></p>
             </div>
             <div  class="flex flex-col">
                 <label for="message" class="text-[18px]">MESSAGE</label>
                 <textarea class="h-[200px] border-[3px] rounded-[10px] p-[15px] resize-none" name="message" type="text" id="message" placeholder="MESSAGE"></textarea>
+                <?php 
+                    $message = "";
+                    if($_SERVER['REQUEST_METHOD'] == 'POST' && empty($_POST['message']))
+                    {
+                        $message = '<div class="popup text-red-700 ">Veuillez entrer un message valide.</div>';
+                    }
+                ?>
+                <p><?php echo $message ?></p>
             </div>
             <div class="sub w-full flex flex-row items-center justify-center">
                 <button type="submit" class="border-2 w-[200px] h-[50px] rounded-[10px]">SEND</button>
@@ -28,27 +52,26 @@
 </div>
 
 <?php
-    $arrayINFO = [];
+    
 
-    $name;
-    $email;
-    $message;
 
-    if($_SERVER['REQUEST_METHOD'] == 'POST')
-    {
-        if(empty($_POST['name']))
-        {
-            echo '<div class="popup fixed top-20 right-0 translate-x-0 opacity-100 transition-all duration-[5s] p-4 bg-red-700 text-white rounded shadow-lg flex flex-row items-center justify-center">
-            <i class="fas fa-multiply text-2xl text-white"></i>Veuillez entrer un nom valide.</div>';
-        }
-        if (empty($_POST['email'])) {
-            echo '<div class="popup fixed top-20 right-0 translate-x-0 opacity-100 transition-all duration-[5s] p-4 bg-red-700 text-white rounded shadow-lg flex flex-row items-center justify-center">
-            <i class="fas fa-multiply text-2xl text-white"></i>Veuillez entrer un Email valide.</div>';
-        }
-        if(empty($_POST['message']))
-        {
-            echo '<div class="popup fixed top-20 right-0 translate-x-0 opacity-100 transition-all duration-[5s] p-4 bg-red-700 text-white rounded shadow-lg flex flex-row items-center justify-center">
-            <i class="fas fa-multiply text-2xl text-white"></i>Veuillez entrer un Message pour Envoyer</div>';
-        }
-    }
+
+    // if (empty($_POST['name'])) {
+    //     $name =  '<div class="popup">Veuillez entrer un nom valide.</div>';
+    // }
+
+    // if (empty($_POST['email'])) {
+    //     echo '<div class="popup absolute top-20 gap-5 right-0 translate-x-0 opacity-100 p-4 bg-red-700 text-white rounded shadow-lg flex items-center justify-center transition-all duration-[2s]">
+    //             <i class="fas fa-times text-2xl"></i>Veuillez entrer un email valide.
+    //           </div>';
+    // }
+
+    // if (empty($_POST['message'])) {
+    //     echo '<div class="popup absolute top-20 gap-5 right-0 translate-x-0 opacity-100 p-4 bg-red-700 text-white rounded shadow-lg flex items-center justify-center transition-all duration-[2s]">
+    //             <i class="fas fa-times text-2xl"></i>Veuillez entrer un message pour envoyer.
+    //           </div>';
+    // }
+
+    
+
 ?>
