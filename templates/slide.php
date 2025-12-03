@@ -5,6 +5,6 @@
     <div class="absolute inset-0 bg-black/60"></div>
     <div class="relative flex flex-col items-center justify-center h-full">
         <h1 class="text-white text-[70px] font-bold drop-shadow-lg">NovaCraft</h1>
-        <button type="button" class="mt-4 text-black bg-white px-10 py-5 rounded-xl text-2xl font-medium shadow-xl md:text-xl">Explore Now</button>
+        <button type="button" id="btnslide" class="mt-4 text-black bg-white px-10 py-5 rounded-xl text-2xl font-medium shadow-xl md:text-xl">Explore Now</button>
     </div>
 </div>
