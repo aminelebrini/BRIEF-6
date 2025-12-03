@@ -1,14 +1,25 @@
 <?php
     $page = $_GET['page'] ?? 'home';
 
-    $Pages = ["home", "service", "about", "contact"];
-
-    if(!in_array($page, $Pages))
+    if($page === 'home')
     {
-        $page = 'home';
+        $view = __DIR__ . "/views/$page.php";
     }
-
-     $view = __DIR__ . "/views/$page.php";
+    else if($page === 'service')
+    {
+        $view = __DIR__ . "/views/$page.php";
+    }
+    else if($page === 'about')
+    {
+        $view = __DIR__ . "/views/$page.php";
+    }
+    else if($page === 'contact')
+    {
+        $view = __DIR__ . "/views/$page.php";
+    }
+    else{
+        $view = __DIR__ . "/views/404.php";
+    }
     include __DIR__ . "/templates/layout.php";
 
 ?>
