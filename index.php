@@ -1,7 +1,10 @@
 <?php
-    $page = parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH);
 
-    if($page === '/home')
+    $page = parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH);
+    if ($page === '/') {
+        $page = '/home';
+    }
+    if($page === '/home' )
     {
         $view = __DIR__ . "/views/$page.php";
     }
@@ -18,8 +21,7 @@
         $view = __DIR__ . "/views/$page.php";
     }
     else{
-        $view = __DIR__ . "/views/$page.php";
+        $view = __DIR__ . "/views/404.php";
     }
-    require_once __DIR__ . "/templates/layout.php";
-
+    require_once $view;
 ?>

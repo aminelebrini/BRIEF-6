@@ -1,5 +1,7 @@
 <?php require_once __DIR__ . "/../contactLogique.php";?>
-
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<?php include __DIR__ . "/../templates/header.php"?>
 <div class="contain p-10 flex flex-col items-center justify-center md:w-full md:justify-evenly gap-10 md:flex-row md:gap-15">
     <div class="left-contain md:w-full flex flex-col items-center justify-center text-center">
         <h1 class="text-[30px] font-bold">Contact Us</h1>
@@ -31,3 +33,4 @@
     </div>
     <div class="Message" id="Message"></div>
 </div>
+<?php include __DIR__ . "/../templates/footer.php" ?>

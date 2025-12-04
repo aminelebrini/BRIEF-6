@@ -1,4 +1,6 @@
- <?php
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<?php
     $Services = [
         [
             "icon" => "fas fa-object-group",
@@ -17,7 +19,7 @@
         ],
     ];
 ?>
-
+<?php include __DIR__ . "/../templates/header.php"?>
 <div class="w-full flex flex-col items-center justify-center gap-10 py-10 h-full md:h-[81vh]">
     <h1 class="text-4xl font-bold">Our Services</h1>
     <div class="w-full flex flex-col md:flex-row md:flex-wrap md:justify-center gap-5">
@@ -30,3 +32,4 @@
         <?php } ?>
     </div>
 </div>
+<?php include __DIR__ . "/../templates/footer.php" ?>

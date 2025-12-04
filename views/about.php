@@ -1,3 +1,6 @@
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<?php include __DIR__ . "/../templates/header.php"?>
 <div class="flex flex-col md:flex-row md:items-center md:justify-around md:w-[90%] md:h-[81vh] gap-5 py-10 mx-auto">
         <div class="w-[100%] flex flex-col justify-center items-center">
             <h1 class="text-[40px] font-bold">About Us</h1>
@@ -7,3 +10,4 @@
         </div>
         <img src="../images/—Pngtree—vector about us images_16023330.png" class="md:w-[450px] md:h-[450px]" alt="bg">
 </div>
+<?php include __DIR__ . "/../templates/footer.php" ?>
