@@ -18,7 +18,7 @@
         $view = __DIR__ . "/views/$page.php";
     }
     else{
-        $view = __DIR__ . "/views/404.php";
+        $view = __DIR__ . "/views/$page.php";
     }
     require_once __DIR__ . "/templates/layout.php";
 
