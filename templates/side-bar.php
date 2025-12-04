@@ -4,9 +4,9 @@
         <div class="close-side-bar">
             <button type="button" class="md:hidden" id="close"><i class="fas fa-multiply text-2xl"></i></button>
         </div>
-        <li><a href="/BRIEF-6/index.php?page=home" class="underline-non">Home</a></li>
-        <li><a href="/BRIEF-6/index.php?page=service" class="underline-non">Services</a></li>
-        <li><a href="/BRIEF-6/index.php?page=about" class="underline-non">About Us</a></li>
-        <li><a href="/BRIEF-6/index.php?page=contact" class="underline-non">Contact</a></li>
+        <li><a href="/home" class="underline-non">Home</a></li>
+        <li><a href="/service" class="underline-non">Services</a></li>
+        <li><a href="/about" class="underline-non">About Us</a></li>
+        <li><a href="/contact" class="underline-non">Contact</a></li>
     </ul>
 </div>

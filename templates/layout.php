@@ -11,14 +11,9 @@
 <?php include __DIR__ . "/header.php";?>
 <?php include __DIR__ . "/side-bar.php"; ?>
 <main class="w-full">
-    <?php     include $view;?>
+    <?php   include $view;?>
 </main>
-<?php $pg = $view;
-if($pg !== "views/home.php")
-{
-    include __DIR__ . "/footer.php";
-}
-?>
+<?php include __DIR__ . "/footer.php";?>
 <script src="../scriptsJs/script.js"></script>
 </body>
 </html>

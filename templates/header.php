@@ -5,10 +5,10 @@
         <button type="button" class="md:hidden"><i class="fas fa-bars text-2xl" id="menu"></i></button>
 
         <ul class="flex flex-row justify-between gap-[20px] hidden md:flex">
-            <li><a href="index.php?page=home" class="underline-non">Home</a></li>
-            <li><a href="index.php?page=service" class="underline-non">Services</a></li>
-            <li><a href="index.php?page=about" class="underline-non">About Us</a></li>
-            <li><a href="index.php?page=contact" class="underline-non">Contact</a></li>
+            <li><a href="/home" class="underline-non">Home</a></li>
+            <li><a href="/service" class="underline-non">Services</a></li>
+            <li><a href="/about" class="underline-non">About Us</a></li>
+            <li><a href="/contact" class="underline-non">Contact</a></li>
         </ul>
     </nav>
 </header>
