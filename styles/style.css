@@ -1,0 +1,31 @@
+.popupsucess {
+    position: fixed;
+    top: 30px;
+    right: 0;
+    width: 500px;
+    max-width: 90%;
+    padding: 15px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    opacity: 0;
+    animation: slideRightToLeft 3s ease-in-out forwards;
+}
+
+@keyframes slideRightToLeft {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    10% {
+        transform: translateX(0);   
+        opacity: 1;
+    }
+    80% {
+        transform: translateX(0);   
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%); 
+        opacity: 0;
+    }
+}
