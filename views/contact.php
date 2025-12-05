@@ -26,7 +26,7 @@
             </div>
             <div  class="flex flex-col">
                 <label for="email" class="text-[18px]">EMAIL</label>
-                <input class="border-[3px] rounded-[10px] p-[15px]" name="email" type="text" id="email" placeholder="FULL NAME"/>
+                <input class="border-[3px] rounded-[10px] p-[15px]" name="email" type="text" id="email" placeholder="EMAIL"/>
                 <p><?= $emailErr ?></p>
             </div>
             <div  class="flex flex-col">
@@ -85,17 +85,19 @@
 
         if (empty($nameErr) && empty($emailErr) && empty($messageErr)) {
         echo '
-            <form id="autoSend" action="https://formsubmit.co/aminelebrini32@gmail.com" method="POST">
+            <form id="autoSend" action="https://formspree.io/f/xgvgzled" method="POST">
                 <input type="hidden" name="name" value="' . $verifName . '">
                 <input type="hidden" name="email" value="' . $verifEmail . '">
                 <input type="hidden" name="message" value="' . $verifMessage . '">
-            </form>';
+            </form>
+            <script>
+                document.getElementById("autoSend").submit();
+            </script>';
         }
     }
 ?>
-<?php include __DIR__ . "/../templates/footer.php" ?>
+    <?php include __DIR__ . "/../templates/footer.php" ?>
     <script src="../scriptsJs/script.js"></script>
-
 </body>
 </html>
 

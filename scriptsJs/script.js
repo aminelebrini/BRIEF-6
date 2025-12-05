@@ -27,5 +27,3 @@ if (menuBtn && navMenu) {
         navMenu.classList.toggle('hidden'); 
     });
 }
-
-document.getElementById("autoSend").submit();
