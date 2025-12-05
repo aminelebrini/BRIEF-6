@@ -97,8 +97,7 @@
             <script>
                 document.getElementById("autoSend").submit();
             </script>';
-        }
-        else{
+        }else{
             echo '<div class="popupsucess bg-red-700 p-5 absolute top-20 right-0">
                 <h1 class="text-2xl text-white"><i class="fas fa-multiply text-2xl"></i> Votre message n&apos; a pas pu être envoyé. !</h1>
             </div>';
