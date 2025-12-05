@@ -99,11 +99,9 @@
                 document.getElementById("autoSend").submit();
             </script>';
         }
-        else{
-            echo '<div class="popupsucess bg-red-500 p-5 fixed top-20 right-0">
+        echo '<div class="popupsucess bg-red-500 p-5 fixed top-20 right-0">
                 <h1 class="text-2xl text-white"><i class="fas fa-multiply text-2xl"></i> Votre message n&apos; a pas pu être envoyé. !</h1>
             </div>';
-        }
     }
 ?>
     <?php include __DIR__ . "/../templates/footer.php" ?>
