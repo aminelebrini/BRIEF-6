@@ -84,6 +84,10 @@
                         
 
         if (empty($nameErr) && empty($emailErr) && empty($messageErr)) {
+
+        echo '<div class="popupsucess bg-green-700 p-5 absolute top-20 right-0">
+            <h1 class="text-2xl text-white"><i class="fas fa-check-square"></i> Votre message a bien été envoyé !</h1>
+        </div>';
         echo '
             <form id="autoSend" action="https://formspree.io/f/xgvgzled" method="POST">
                 <input type="hidden" name="name" value="' . $verifName . '">
@@ -93,6 +97,11 @@
             <script>
                 document.getElementById("autoSend").submit();
             </script>';
+        }
+        else{
+            echo '<div class="popupsucess bg-red-700 p-5 absolute top-20 right-0">
+                <h1 class="text-2xl text-white"><i class="fas fa-multiply text-2xl"></i> Votre message n&apos; a pas pu être envoyé. !</h1>
+            </div>';
         }
     }
 ?>
