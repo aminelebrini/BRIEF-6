@@ -1,13 +1,31 @@
-const Side = document.querySelector('.side-bar');
-document.getElementById('menu').addEventListener('click', () => {
-    Side.classList.toggle("translate-x-full");
-});
+const side = document.querySelector('.side-bar'); 
+const menuBtn = document.getElementById('open'); 
+const closeBtn = document.getElementById('close'); 
+const btnSlide = document.getElementById('btnslide');
 
-document.getElementById('close').addEventListener('click', ()=>{
-     Side.classList.add("translate-x-full");
-});
+if (menuBtn && side) {
+    menuBtn.addEventListener('click', () => {
+        side.classList.toggle('translate-x-full');
+    });
+}
 
-document.getElementById('btnslide').addEventListener('click', ()=>{
-    window.location.href ="index.php?page=service";
-})
+if (closeBtn && side) {
+    closeBtn.addEventListener('click', () => {
+        side.classList.add('translate-x-full');
+    });
+}
 
+if (btnSlide) {
+    btnSlide.addEventListener('click', () => {
+        window.location.href = "/service";
+    });
+}
+
+const navMenu = document.querySelector('.nav');
+if (menuBtn && navMenu) {
+    menuBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('hidden'); 
+    });
+}
+
+document.getElementById("autoSend").submit();
