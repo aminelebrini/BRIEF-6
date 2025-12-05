@@ -12,9 +12,9 @@
 <?php include __DIR__ . "/../templates/header.php"?>
 <?php include __DIR__ . "/../templates/side-bar.php"?>
 <div class="contain p-10 flex flex-col items-center justify-center md:w-full md:justify-evenly gap-10 md:flex-row md:gap-15">
-    <div class="left-contain md:w-full flex flex-col items-center justify-center text-center">
-        <h1 class="text-[30px] font-bold">Contact Us</h1>
-        <p class="text-[20px]">Have a project in mind or just want to say hello? Fill out the form, and our team at NovaCraft Studio will respond promptly.<br>
+    <div class="left-contain md:w-full flex flex-col items-center justify-center text-center md:text-left">
+        <h1 class="text-[30px] font-bold md:text-left">Contact Us</h1>
+        <p class="text-[20px] text-center md:text-left">Have a project in mind or just want to say hello? Fill out the form, and our team at NovaCraft Studio will respond promptly.<br>
         We’re excited to hear from you and bring your ideas to life!</p>
     </div>
     <div class="right-contain w-full flex flex-col items-center justify-center gap-10">
